@@ -13,7 +13,7 @@
 }
 
 + (UIColor *)hb_tintColor {
-	return [UIColor colorWithWhite:68.f / 255.f alpha:1];
+	return [UIColor colorWithWhite:74.f / 255.f alpha:1];
 }
 
 #pragma mark - UIViewController
