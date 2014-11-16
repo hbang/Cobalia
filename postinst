@@ -1,0 +1,2 @@
+#!/bin/bash
+[[ -d "/tmp/FlipswitchCache" ]] && rm -rf /tmp/FlipswitchCache || true
