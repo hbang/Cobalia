@@ -5,11 +5,11 @@
 #pragma mark - Constants
 
 + (NSString *)hb_shareText {
-	return [NSString stringWithFormat:@"I’m using Cobalia to quickly access settings from my %@ app switcher!", [UIDevice currentDevice].localizedModel];
+	return [NSString stringWithFormat:@"I’m using Cobalia to quickly access toggles from my %@ app switcher!", [UIDevice currentDevice].localizedModel];
 }
 
 + (NSURL *)hb_shareURL {
-	return [NSURL URLWithString:@"https://cydia.saurik.com/package/ws.hbang.cobalia"];
+	return [NSURL URLWithString:@"https://www.hbang.ws/tweaks/cobalia"];
 }
 
 + (UIColor *)hb_tintColor {
