@@ -21,6 +21,7 @@ HBPreferences *preferences;
 		}
 	} else if ([self.activeDataSource isKindOfClass:HBCBAppSwitcherTogglesDataSource.class]) {
 		self.activeDataSource = nil;
+		[self _configureDataSourceIfNecessaryAndPossible];
 	}
 
 	%orig;
