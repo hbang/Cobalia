@@ -31,7 +31,7 @@ HBPreferences *preferences;
 		return %orig;
 	}
 
-	HBCBToggleContainer *toggleContainer = [[HBCBToggleContainer alloc] initWithFrame:CGRectZero peopleController:self];
+	HBCBToggleContainer *toggleContainer = [[[HBCBToggleContainer alloc] initWithFrame:CGRectZero peopleController:self] autorelease];
 	toggleContainer.itemWrapper = item;
 	toggleContainer.legibilitySettings = self.legibilitySettings;
 	return toggleContainer;
