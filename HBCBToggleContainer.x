@@ -65,7 +65,7 @@
 		TemplateBundle = [[NSBundle bundleWithPath:@"/Library/Application Support/CobaliaFlipswitch.bundle"] retain];
 	});
 
-	_contactView.alpha = [[FSSwitchPanel sharedPanel] stateForSwitchIdentifier:self.switchID] == FSSwitchStateOff ? 0.6f : 1;
+	_contactView.alpha = [[FSSwitchPanel sharedPanel] stateForSwitchIdentifier:self.switchID] == FSSwitchStateOff ? 0.6f : 1; // can't do better than this with fake blur views :(
 	_contactView.iconView.image = [[FSSwitchPanel sharedPanel] imageOfSwitchState:[[FSSwitchPanel sharedPanel] stateForSwitchIdentifier:self.switchID] controlState:UIControlStateNormal forSwitchIdentifier:self.switchID usingTemplate:TemplateBundle];
 }
 
