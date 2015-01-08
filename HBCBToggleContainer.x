@@ -38,9 +38,7 @@
 
 - (void)setItemWrapper:(SBScrollViewItemWrapper *)itemWrapper {
 	_itemWrapper = [itemWrapper retain];
-
 	_contactView.title = [preferences boolForKey:kHBCBPreferencesSwitchLabelsKey] ? [[FSSwitchPanel sharedPanel] titleForSwitchIdentifier:self.switchID] : @"";
-
 	[self updateState];
 }
 
