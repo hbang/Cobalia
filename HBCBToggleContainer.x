@@ -38,7 +38,11 @@
 
 - (void)setItemWrapper:(SBScrollViewItemWrapper *)itemWrapper {
 	_itemWrapper = [itemWrapper retain];
-	_contactView.title = [preferences boolForKey:kHBCBPreferencesSwitchLabelsKey] ? [[FSSwitchPanel sharedPanel] titleForSwitchIdentifier:self.switchID] : @"";
+
+	NSString *switchName = [[FSSwitchPanel sharedPanel] titleForSwitchIdentifier:self.switchID];
+	_contactView.title = [preferences boolForKey:kHBCBPreferencesSwitchLabelsKey] ? switchName : @"";
+	_contactView.accessibilityLabel = switchName;
+
 	[self updateState];
 }
 
