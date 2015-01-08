@@ -5,14 +5,16 @@
 	<key>items</key>
 	<array>
 		<dict>
-			<key>footerAlignment</key>
-			<integer>0</integer>
 			<key>cell</key>
 			<string>PSGroupCell</string>
-			<key>footerText</key>
-			<string>© 2014, HASHBANG Productions</string>
-			<key>label</key>
-			<string>Cobalia 1.0</string>
+			<key>condensed</key>
+			<true/>
+			<key>headerCellClass</key>
+			<string>HBPackageNameHeaderCell</string>
+			<key>icon</key>
+			<string>icon.png</string>
+			<key>packageIdentifier</key>
+			<string>ws.hbang.cobalia</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -52,7 +54,7 @@
 			<key>cellClass</key>
 			<string>HBTwitterCell</string>
 			<key>label</key>
-			<string>Alfonso Torres</string>
+			<string>Alfonso Dingo Torres</string>
 			<key>user</key>
 			<string>CPVideoMaker</string>
 		</dict>
