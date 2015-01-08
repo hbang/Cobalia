@@ -1,5 +1,5 @@
 #ifndef COBALIA_TWEAK_XM
-extern NSUserDefaults *userDefaults;
+extern NSUserDefaults *preferences;
 #endif
 
 static NSString *const kHBCBPreferencesDomain = @"ws.hbang.cobalia";

@@ -5,7 +5,7 @@ Cobalia_FILES = $(wildcard *.m)
 Cobalia_INSTALL_PATH = /Library/PreferenceBundles
 Cobalia_FRAMEWORKS = UIKit
 Cobalia_PRIVATE_FRAMEWORKS = Preferences
-Cobalia_LIBRARIES = hbangprefs
+Cobalia_LIBRARIES = cepheiprefs
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 

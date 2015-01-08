@@ -21,11 +21,11 @@
 }
 
 - (NSString *)titleForSection:(NSUInteger)section {
-	return [userDefaults boolForKey:kHBCBPreferencesSectionLabelKey] ? @"Toggles" : @"";
+	return [preferences boolForKey:kHBCBPreferencesSectionLabelKey] ? @"Toggles" : @"";
 }
 
 - (void)updateIfNecessary {
-	_switchIDs = [userDefaults objectForKey:kHBCBPreferencesSwitchesKey];
+	_switchIDs = [preferences objectForKey:kHBCBPreferencesSwitchesKey];
 }
 
 - (void)cachedMonogramImageForPersonID:(NSInteger)personID ofSize:(CGFloat)size generatingIfNecessaryWithResult:(id)result {}

@@ -3,17 +3,18 @@
 #import "Global.h"
 #import "HBCBToggleContainer.h"
 #import "HBCBAppSwitcherTogglesDataSource.h"
+#import <Cephei/HBPreferences.h>
 #import <SpringBoard/SBAppSwitcherPeopleViewController.h>
 #import <SpringBoard/SBAppSwitcherPeopleScrollView.h>
 
 @class SBAppSwitcherPeopleScrollView, SBScrollViewItemWrapper;
 
-NSUserDefaults *userDefaults;
+HBPreferences *preferences;
 
 %hook SBAppSwitcherPeopleViewController
 
 - (void)switcherWillBePresented:(BOOL)animated {
-	if ([userDefaults boolForKey:kHBCBPreferencesEnabledKey]) {
+	if ([preferences boolForKey:kHBCBPreferencesEnabledKey]) {
 		if (![self.activeDataSource isKindOfClass:HBCBAppSwitcherTogglesDataSource.class]) {
 			self.activeDataSource = [[HBCBAppSwitcherTogglesDataSource alloc] init];
 			[self dataSourceChanged:self.activeDataSource];
@@ -38,18 +39,9 @@ NSUserDefaults *userDefaults;
 
 %end
 
-void HBCBPreferencesChanged() {
-	// flipswitch writes directly to the plist...
-	NSDictionary *preferences = [NSDictionary dictionaryWithContentsOfFile:[[[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"Preferences"] stringByAppendingPathComponent:kHBCBPreferencesDomain] stringByAppendingPathExtension:@"plist"]];
-
-	if (preferences[kHBCBPreferencesSwitchesKey]) {
-		[userDefaults setObject:preferences[kHBCBPreferencesSwitchesKey] forKey:kHBCBPreferencesSwitchesKey];
-	}
-}
-
 %ctor {
-	userDefaults = [[NSUserDefaults alloc] initWithSuiteName:kHBCBPreferencesDomain];
-	[userDefaults registerDefaults:@{
+	preferences = [[HBPreferences alloc] initWithIdentifier:kHBCBPreferencesDomain];
+	[preferences registerDefaults:@{
 		kHBCBPreferencesEnabledKey: @YES,
 		kHBCBPreferencesSwitchesKey: IS_IPAD
 			? @[ @"com.a3tweaks.switch.airplane-mode", @"com.a3tweaks.switch.wifi", @"com.a3tweaks.switch.do-not-disturb", @"com.a3tweaks.switch.rotation-lock", @"com.a3tweaks.switch.respring" ]
@@ -59,7 +51,4 @@ void HBCBPreferencesChanged() {
 	}];
 
 	%init;
-
-	HBCBPreferencesChanged();
-	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)HBCBPreferencesChanged, CFSTR("ws.hbang.cobalia/ReloadPrefs"), NULL, kNilOptions);
 }

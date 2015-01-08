@@ -16,16 +16,8 @@
 	return [UIColor colorWithWhite:74.f / 255.f alpha:1];
 }
 
-#pragma mark - UIViewController
-
-- (instancetype)init {
-	self = [super init];
-
-	if (self) {
-		_specifiers = [[self loadSpecifiersFromPlistName:@"Root" target:self] retain];
-	}
-
-	return self;
++ (NSString *)hb_specifierPlist {
+	return @"Root";
 }
 
 @end

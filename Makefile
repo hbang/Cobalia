@@ -3,7 +3,7 @@ include theos/makefiles/common.mk
 TWEAK_NAME = Cobalia
 Cobalia_FILES = Tweak.xm HBCBAppSwitcherToggleItem.m HBCBAppSwitcherTogglesDataSource.m HBCBAppSwitcherToggleView.xm HBCBToggleContainer.x
 Cobalia_FRAMEWORKS = AddressBookUI CoreGraphics UIKit
-Cobalia_LIBRARIES = flipswitch
+Cobalia_LIBRARIES = cephei flipswitch
 
 BUNDLE_NAME = CobaliaFlipswitch
 CobaliaFlipswitch_INSTALL_PATH = /Library/Application Support

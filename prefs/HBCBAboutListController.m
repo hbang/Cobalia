@@ -2,16 +2,10 @@
 
 @implementation HBCBAboutListController
 
-#pragma mark - PSListController
+#pragma mark - Constants
 
-- (instancetype)init {
-	self = [super init];
-
-	if (self) {
-		_specifiers = [[self loadSpecifiersFromPlistName:@"About" target:self] retain];
-	}
-
-	return self;
++ (NSString *)hb_specifierPlist {
+	return @"About";
 }
 
 @end
