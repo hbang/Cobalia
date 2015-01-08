@@ -48,7 +48,7 @@ HBPreferences *preferences;
 			? @[ @"com.a3tweaks.switch.airplane-mode", @"com.a3tweaks.switch.wifi", @"com.a3tweaks.switch.do-not-disturb", @"com.a3tweaks.switch.rotation-lock", @"com.a3tweaks.switch.respring" ]
 			: @[ @"com.a3tweaks.switch.airplane-mode", @"com.a3tweaks.switch.wifi", @"com.a3tweaks.switch.do-not-disturb", @"com.a3tweaks.switch.rotation-lock", @"com.a3tweaks.switch.vibration", @"com.a3tweaks.switch.respring", @"com.a3tweaks.switch.flashlight" ],
 		kHBCBPreferencesSectionLabelKey: @YES,
-		kHBCBPreferencesSwitchLabelsKey: @YES
+		kHBCBPreferencesSwitchLabelsKey: @NO
 	}];
 
 	%init;
