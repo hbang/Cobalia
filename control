@@ -1,10 +1,11 @@
 Package: ws.hbang.cobalia
 Name: Cobalia
 Pre-Depends: firmware (>= 8.0)
-Depends: mobilesubstrate, com.a3tweaks.flipswitch, preferenceloader, ws.hbang.common
-Version: 1.0~beta1
+Depends: mobilesubstrate, com.a3tweaks.flipswitch (>= 1.0.6), preferenceloader, ws.hbang.common (>= 1.2)
+Version: 1.0
 Architecture: iphoneos-arm
 Description: Toggles in the iOS 8 app switcher
 Maintainer: HASHBANG Productions <support@hbang.ws>
 Author: HASHBANG Productions <support@hbang.ws>
+Support: https://www.hbang.ws/faq
 Section: Tweaks
