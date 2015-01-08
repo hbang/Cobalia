@@ -19,4 +19,8 @@ after-stage::
 	$(ECHO_NOTHING)cp postinst $(THEOS_STAGING_DIR)/DEBIAN/postinst$(ECHO_END)
 
 after-install::
-	install.exec "killall -9 SpringBoard"
+ifeq ($(RESPRING),0)
+	install.exec "killall Preferences; sleep 0.2; sbopenurl prefs:root=Cobalia"
+else
+	install.exec "spring"
+endif
