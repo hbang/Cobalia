@@ -15,6 +15,8 @@
 			<integer>28</integer>
 			<key>type</key>
 			<string>glyph</string>
+			<key>variant</key>
+			<string>subtle</string>
 			<key>x</key>
 			<integer>0</integer>
 			<key>y</key>
