@@ -18,7 +18,7 @@
 			<key>key</key>
 			<string>Enabled</string>
 			<key>label</key>
-			<string>Enabled</string>
+			<string>ENABLED</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -28,7 +28,7 @@
 			<key>cell</key>
 			<string>PSLinkCell</string>
 			<key>label</key>
-			<string>Switches</string>
+			<string>SWITCHES</string>
 			<key>isController</key>
 			<true/>
 			<key>bundle</key>
@@ -72,7 +72,7 @@
 			<key>key</key>
 			<string>SectionLabel</string>
 			<key>label</key>
-			<string>Section Label</string>
+			<string>SECTION_LABEL</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -84,7 +84,7 @@
 			<key>key</key>
 			<string>SwitchLabels</string>
 			<key>label</key>
-			<string>Switch Labels</string>
+			<string>SWITCH_LABELS</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -98,7 +98,7 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>About</string>
+			<string>ABOUT</string>
 		</dict>
 	</array>
 	<key>title</key>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Default text for sharing the tweak. %@ is the device type (ie, iPhone). -->
+	<key>SHARE_TEXT</key>
+	<string>I’m using Cobalia to quickly access toggles from my %@ app switcher!</string>
+
+	<!-- Switch to enable/disable the tweak. -->
+	<key>ENABLED</key>
+	<string>Enabled</string>
+
+	<!-- Button leading to a reorderable list of switches. -->
+	<key>SWITCHES</key>
+	<string>Switches</string>
+
+	<!-- Switches to toggle the section label (above the switches) and switch labels (below each of them). -->
+	<key>SECTION_LABEL</key>
+	<string>Section Label</string>
+	<key>SWITCH_LABELS</key>
+	<string>Switch Labels</string>
+
+	<!-- Button leading to the about page. -->
+	<key>ABOUT</key>
+	<string>About</string>
+</dict>
+</plist>
