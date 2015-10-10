@@ -1,2 +1,6 @@
 #!/bin/bash
-[[ -d "/tmp/FlipswitchCache" ]] && rm -rf /tmp/FlipswitchCache || true
+if [[ -d "/tmp/FlipswitchCache" ]]; then
+	rm -rf /tmp/FlipswitchCache
+fi
+
+exit 0
