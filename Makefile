@@ -1,4 +1,4 @@
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = Cobalia
 Cobalia_FILES = Tweak.xm HBCBAppSwitcherToggleItem.m HBCBAppSwitcherTogglesDataSource.m HBCBAppSwitcherToggleView.xm HBCBToggleContainer.x
