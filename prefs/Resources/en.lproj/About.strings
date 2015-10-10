@@ -22,8 +22,8 @@
 	<key>DONATE</key>
 	<string>Donate</string>
 
-	<!-- Footer -->
+	<!-- Footer under the donate button. -->
 	<key>DONATE_FOOTER</key>
-	<string>If you like this tweak, please consider saying “thank you” with a donation.</string>
+	<string>Please consider showing your appreciation for this tweak with a donation.</string>
 </dict>
 </plist>
