@@ -59,7 +59,9 @@
 }
 
 - (void)heldGestureRecognizerOnContactContainer:(UILongPressGestureRecognizer *)gestureRecognizer {
-	[[FSSwitchPanel sharedPanel] applyAlternateActionForSwitchIdentifier:self.switchID];
+	if (gestureRecognizer.state == UIGestureRecognizerStateBegan) {
+		[[FSSwitchPanel sharedPanel] applyAlternateActionForSwitchIdentifier:self.switchID];
+	}
 }
 
 - (void)updateState {
