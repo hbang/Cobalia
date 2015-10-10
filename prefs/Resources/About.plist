@@ -19,10 +19,16 @@
 			<string>Cobalia</string>
 		</dict>
 		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
 			<key>big</key>
 			<true/>
 			<key>cellClass</key>
 			<string>HBTwitterCell</string>
+			<key>height</key>
+			<integer>64</integer>
 			<key>label</key>
 			<string>HASHBANG Productions</string>
 			<key>user</key>
